@@ -2,7 +2,7 @@ import csv, requests, json
 from slugify import slugify
 from time import sleep
 
-apikey = ddde095f-81cf-4dbe-bf8e-be0c18145d8a
+apikey = "ddde095f-81cf-4dbe-bf8e-be0c18145d8a"
 def get_first_cpe(url):
     for i in range(0, 10):
         try:
