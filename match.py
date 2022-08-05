@@ -16,7 +16,7 @@ def get_first_cpe(url):
         # cpe:2.3:a:nextcloud:nextcloud:1.0.0:*:*:*:*:android:*:*
         cpe = cpe.split(":")
         cpe = cpe[0:4]
-        cpe = ":".concat(cpe)
+        cpe = ":".join(cpe)
         return cpe
     return False
 
@@ -33,7 +33,7 @@ with open('frama.csv', newline='') as frama:
 # new_apps_list = []
 
 with open('apps.txt', newline='') as apps_file:
-    with open('new_apps.csv', 'w', newline='') as new_apps:
+    with open('new_apps.csv', 'a+', newline='') as new_apps:
         new_apps_writer = csv.writer(new_apps)
         new_apps_writer.writerow(["App YnH", "Apps proprio", "CPE"])
         for ynh_app in apps_file:
