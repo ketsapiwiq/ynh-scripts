@@ -15,7 +15,7 @@ def get_first_cpe(url):
         cpe = results['result']['cpes'][0]['cpe23Uri']
         # cpe:2.3:a:nextcloud:nextcloud:1.0.0:*:*:*:*:android:*:*
         cpe = cpe.split(":")
-        cpe = cpe[0:4]
+        cpe = cpe[0:5]
         cpe = ":".join(cpe)
         return cpe
     return False
